@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Enfoque"
-date:   2021-12-16 10:00:00 -0300
+date:   2021-12-16 01:00:00 -0300
 categories: timag
 ---
 El método para automatizar la detección y el conteo de parásitos y núcleos celulares en las imágenes de microscopía, se construye a partir de la idea fundamental de segmentar las imágenes por niveles de gris y áreas, como consecuencia de observar que las distintas componentes de las células presentan niveles de gris característicos (los núcleos de células muertas son más oscuros que los correspondientes a células vivas, así como la membrana es más clara que el citoplasma) y que los parásitos son considerablemente mas pequeños que los núcleos. Adicionalmente, dado que el trabajo del grupo de investigación del Instituto Clemente Estable se ha desarrollado en Fiji (ImageJ), y por tanto resulta una herramienta familiar en caso de arribar a una solución que suponga interacción con el usuaario, una de las premisas del proyecto es continuar trabajando en Fiji. Por lo tanto, se apunta a generar una macro de Fiji que automatice el conteo de núcleos de células vivas, núcleos de células muertas y parásitos.

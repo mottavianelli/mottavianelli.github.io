@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Trypanosoma cruzi y enfermedad de Chagas"
-date:   2021-12-16 10:00:00 -0300
+date:   2021-12-16 04:00:00 -0300
 categories: timag
 ---
 # Enfermedad del Chagas
