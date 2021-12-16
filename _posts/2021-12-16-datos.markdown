@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Datos"
+date:   2021-12-16 10:01:00 -0300
+categories: timag
+---
+Los datos proporcionados para la investigación y el desarrollo de un método automático de detección y conteo del parásito Trypanosoma cruzi consisten en un banco de imágenes compuesto por 30 imágenes microscópicas de tejidos celulares de mamíferos, infectados en condiciones de laboratorio por Trypanosoma Cruzi y sujetas a una tinción para mejorar su contraste. 
+
+De las 30 imágenes disponibles, 15 han sido etiquetadas, marcando núcleos de células vivas, núcleos de células muertas (o en proceso de morir), y parásitos. Corresponde señalar que las etiquetas de los parásitos no son precisas a nivel de coordenadas, lo cual dificulta el analisis cuantitativo del error del método propuesto para su detección. 
+
+A cotinuación, se presentan ejemplos de las imágenes mencionadas
+
+![Img1](https://figshare.com/ndownloader/files/30768373/preview/30768373/preview.jpg?private_link=893ad0a491482f95b181)
+
+
+El banco de imágenes puede consultarse en el siguiente [enlace](https://figshare.com/s/893ad0a491482f95b181?file=30990769)
+
+
+![alt text](assets\img\img2_labeled.PNG "Title")
+
+
+
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
