@@ -4,32 +4,63 @@ title:  "Resultados"
 date:   2021-12-16 00:00:00 -0300
 categories: timag
 ---
-La primer imágen es la proporcionada y luego las estimaciones de: núcleos muertos, núcleos vivos y parásitos, núcleos vivos, citoplasma y membrana, generadas para un par de valores de niveles de gris y ratio de morfología matemática.
+La macro de Fiji y el script de Python para medida de error se encuentran en el [repositorio de github](https://github.com/mottavianelli/timag-trypanosomacruzi) asociado al proyecto. 
 
-Para cada estimación de núcleos se realizó el etiquetado en fiji y luego se midió el error con la función de python implementada. Por ejemplo, para una de las imágenes se obtuvieron dos cuadros, uno con la medida de precisión y otro con recall, como los siguientes:
+A continuación se exponen las imágenes resultantes del procesamiento aplicado. En primer lugar se muestra una de las imágenes proporcionadas por las científicas; las siguientes corresponden a los resultados obtenidos en cuanto a representaciones binarias aproximadas de: núcleos muertos, núcleos vivos y parásitos, núcleos vivos, citoplasma y membrana, generadas para una combinación de valores de niveles de gris y radio de elemento estructurante de morfología matemática.
 
-(cuadro como los del excel)
+![img_original](https://figshare.com/ndownloader/files/31868033/preview/31868033/preview.jpg)
 
-Se observa que a medida que crece el ratio aumenta la precisión y cae el recall, esto tiene sentido pues filtra componentes pero las que quedan son más seguras. Un análisis similar se puede hacer para los niveles de gris, teniendo en cuenta que los niveles más oscuros son de núcleos muertos y por encima del 100 es casi todo citoplasma y membrana. A partir de estas medidas para 10 imágenes se eligió el mejor par de parámetros tanto para núcleos vivos como muertos. Estos fueron:
+![nucleos_muertos](https://figshare.com/ndownloader/files/31868042/preview/31868042/preview.jpg)
 
-núcleos muertos:
-	ratio=8
-	threshold=[0;40]
+![nucleos_vivos_parasitos](https://figshare.com/ndownloader/files/31868048/preview/31868048/preview.jpg)
 
-núcleos vivos:
-	ratio=8
-	threshold=[20,80]
+![nucleos_vivos](https://figshare.com/ndownloader/files/31868045/preview/31868045/preview.jpg)
+
+![citoplasma](https://figshare.com/ndownloader/files/31868024/preview/31868024/preview.jpg)
+
+![membrana](https://figshare.com/ndownloader/files/31868039/preview/31868039/preview.jpg)
+
+
+
+Para cada estimación de núcleos se realiza el etiquetado en Fiji y se mide el error con la función de Python implementada. A modo de ejemplo se presenta a continuación la medida del error obtenido para una de las imágenes, donde puede observarse dos cuadros: uno corresponde a la precisión y el otro al recall:
+
+| Recall   |     Radio   |              |  |              |              |              |
+|----------|--------|--------------|-----------------|--------------|--------------|--------------|
+|    Niveles de gris       | 		| 0-20         | 0-25            | 0-30         | 0-35         | 0-40         |
+|    |      6 | 0.6153846154 | 0.7692307692    | 0.8846153846 | 0.9615384615 | 1            |
+|          |      8 | 0.5384615385 | 0.7307692308    | 0.8076923077 | 0.8846153846 | 0.9230769231 |
+|          |     10 | 0.4615384615 | 0.5             | 0.6538461538 | 0.7307692308 | 0.7692307692 |
+|          |     12 | 0.3076923077 | 0.3461538462    | 0.5384615385 | 0.6538461538 | 0.7307692308 |
+
+
+| Precission |     Radio     |              |  |              |              |              |
+|----------|------------|--------------|-----------------|--------------|--------------|--------------|
+|       Niveles de gris   |  | 0-20         | 0-25            | 0-30         | 0-35         | 0-40         |
+|     |          6 | 0.5          | 0.5263157895    | 0.4107142857 | 0.3623188406 | 0.3661971831 |
+|          |          8 | 0.6363636364 | 0.6333333333    | 0.5384615385 | 0.4509803922 | 0.380952381  |
+|          |         10 | 0.9230769231 | 0.619047619     | 0.5666666667 | 0.5          | 0.4444444444 |
+|          |         12 | 0.8888888889 | 0.6428571429    | 0.5833333333 | 0.5666666667 | 0.5277777778 |
+
+A partir de los datos obtenidos, se observa que a medida que crece el radio de la operación morfológica, aumenta la precisión y disminuye el recall. Este comportamientO puede explicarse considerando que un elemento estructurante de mayor radio filtrará más compoenentes, pero aquellos que no son filtrados, garantizan mayor precisión. Un análisis similar puede aplicarse para los rangos de nivel de gris, teniendo en cuenta que los niveles más oscuros son de núcleos de células muertas y por encima del nivel 100, se encuentra principalmente citoplasma y membrana. En función de estas medidas para 10 imágenes, se elige el mejor par de parámetros tanto para núcleos vivos como muertos. Estos parámetros resultan:
+
+- Núcleos de células muertas:
+	 - radio = 8
+	 - threshold = [0;40]
+
+- Núcleos de células vivas:
+	- radio = 8
+	- threshold = [20,80]
 	
-Para estos parámetros, se midió la precisión y el recall para las 5 imágenes restantes y se obtuvieron los siguientes resultados:
+Para estos parámetros, se mide la precisión y el recall para las 5 imágenes restantes, obteniendo los siguientes resultados:
 
-núcleos muertos:
-	precisión=35%
-	recall=82%
+- Núcleos de células muertas:
+	- precisión = 35%
+	- recall = 82%
 
-núcleos vivos:
-	precisión=58%
-	recall=75%
+- Núcleos de células vivas:
+	- precisión = 58%
+	- recall = 75%
 	
-(Imagenes de componentes superpuestas, imagen y núcleos vivos e imágen y núcleos muertos, con y sin dilatar)
+
 
 Por último se realizaron medidas cualitativas de las áreas consideradas y se vio que dilatar un poco aproximaba mejor a las superficies reales.
