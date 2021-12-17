@@ -1,6 +1,23 @@
 ---
 layout: post
 title:  "Problema"
-date:   2021-12-16 02:00:00 -0300
+date:   2021-12-16 03:00:00 -0300
 categories: timag
 ---
+
+El problema planteado en el marco del proyecto final de Tratamiento de Imágenes por computadora consiste esencialmente en automatizar la detección y el conteo de parásitos y núcleos celulares en imágenes microscópicas de tejidos contaminados con el parásito Trypanosoma cruzi y expuestos a una tinción característica. 
+
+Actualmente, el grupo de investigación del Instituto de Investigaciones Biológicas Clemente Estable (IIBCE) trabaja explorando posibles tratamientos ante la infección por Trypanosoma cruzi, y una etapa fundamental del proceso de investigación consiste en cuantificar parásitos y células, para determinar porcentajes de células infectadas, y cantidad de parásitos por célula.   
+
+En la base de imágenes provista, se cuenta con 15 imágenes etiquetadas por las científicas de IIBCE, utilizando el plugin Cell counter de Fiji. A continuación se exhiben algunas de las imagenes referenciadas. 
+ 
+Un analisis preliminar de algunas de las imágenes etiquetadas revela alguna de los posibles obstáculos del proyecto:
+
+- Muchos de los parásitos etiquetados con Cell counter no se observen a simple vista; se requiere un "ojo entrenado" y conocimiento de la materia para determinar que efectivamente se trata de un parásito. Por lo tanto, la detección en estos casos es sumamente improbable. 
+- Las etiquetas de los parásitos no coinciden en coordenadas con la ubicación del parásito, lo cual puede impedir una analisis comparativo a nivel cuantitativo con los resultados obtenidos.
+- Los núcleos de células vivas, en ocasiones, presentan regiones más oscuras en su interior, atribuidas al ARN, las cuales dificultan inmensamente disitinguirlos de núcleos de células muertas. 
+- Para una persona sin conocimiento específico de la materia, es prácticamente 
+
+# Objetivos
+
+Los objetivos del proyecto consisten en cuantificar el porcentaje de células infectadas por Trypanosoma cruzi, y determinar la cantidad promedio de amastigotes por célula. Para tal fin, resulta necesario desarrollar un método que permita automatizar la detecciòn y el conteo de parásitos y núcleos.  
