@@ -42,5 +42,3 @@ Recientemente, en 2020 se incorporaron a la “Hoja de ruta para las enfermedade
 
 En la actualidad, la OMS plantea que el control vectorial y las estrategias para reducir la transmisión son los métodos más útiles al momento para prevenir la enfermedad de Chagas en América Latina. Es importante aclarar que además no hay vacunas contra la enfermedad de Chagas.
 
-En base a esta relevancia que ha tomado en los últimos años la enfermedad de Chagas es donde se enmarca nuestro proyecto, que intenta colaborar con el desarrollo de las pruebas clínicas que se realizan en el laboratorio X a través del tratamiento de imágenes que será desarrollado a continuación.
-
